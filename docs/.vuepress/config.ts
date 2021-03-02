@@ -6,6 +6,12 @@ const config: UserConfig<DefaultThemeOptions> = {
   description: 'hello world',
 
   themeConfig: {
+    navbar: [
+      {
+        text: 'github',
+        link: 'https://github.com/Tyrics/blog'
+      }
+    ],
     sidebar: [
       {
         text: 'Home',
