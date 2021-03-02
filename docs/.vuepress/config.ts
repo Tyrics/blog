@@ -6,7 +6,6 @@ const config: UserConfig<DefaultThemeOptions> = {
   description: 'hello world',
 
   themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
     sidebar: [
       {
         text: 'Home',
