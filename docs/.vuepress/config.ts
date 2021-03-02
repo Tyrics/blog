@@ -4,6 +4,7 @@ const config: UserConfig<DefaultThemeOptions> = {
   lang: 'zh-CN',
   title: 'Tyric的随笔',
   description: 'hello world',
+  base: '/blog/',
 
   themeConfig: {
     navbar: [
