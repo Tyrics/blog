@@ -1,7 +1,5 @@
 {
-  "name": "vuepress-starter",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Tyric <2395234635@qq.com>",
   "license": "MIT",
   "scripts": {
