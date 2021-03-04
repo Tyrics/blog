@@ -40,6 +40,17 @@ const config: UserConfig<DefaultThemeOptions> = {
             children: []
           }
         ]
+      },
+      {
+        isGroup: true,
+        text: 'ECMAScript',
+        children: [
+          {
+            text: 'JavaScript 异步',
+            link: '/ECMAScript/async.md',
+            children: []
+          }
+        ]
       }
     ]
   }
