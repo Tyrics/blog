@@ -3,7 +3,7 @@ name: docs
 on:
   # 每当 push 到 main 分支时触发部署
   push:
-    branches: [main]
+    branches: [master]
   # 手动触发部署
   workflow_dispatch:
 
@@ -51,6 +51,8 @@ jobs:
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.BLOG }}
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
