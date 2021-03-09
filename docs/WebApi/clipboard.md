@@ -1,4 +1,4 @@
-## 浏览器操作剪切板（Clipboard API）
+# 浏览器操作剪切板（Clipboard API）
 
 浏览器操作剪切板有三种方式：
 

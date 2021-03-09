@@ -1,4 +1,4 @@
-## `type` vs `interface`
+# TS中的接口与类型别名的区别
 
 在 typescript 中, 我们声明类型有两种方式： 接口(interface) 和类型别名(type alias)，[官方文档](https://www.typescriptlang.org/docs/handbook/advanced-types.html)对于两者及其异同的描述如下：
 
