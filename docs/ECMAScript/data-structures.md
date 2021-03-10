@@ -1,6 +1,6 @@
-# JS 数据结构知识补漏
+# JS 数据类型相关
 
-记录一些日常使用中可能下意识会忽略的地方
+这里主要记录一些对于个人而言比较容易出错的地方以及一些相对较'冷'的知识。关于各个数据类型的 api, 可以在 [MDN](https://developer.mozilla.org/zh-CN/)查询。
 
 ## 01. `typeof` 操作符的局限性
 
@@ -19,7 +19,7 @@ function getType(val) {
 }
 ```
 
-## 02. 关于 Number 类型
+## 02. Number 类型的局限性
 
 Number 类型包括整数和浮点数，取值范围为 `-(2^53-1)` 到 `2^53-1`，此外还有几个带符号的值：`+Infinity(正无穷)`、 `-Infinity(负无穷)` 和 `NaN(非数字)`。
 
@@ -34,7 +34,7 @@ const number = Number.MAX_SAFE_INTEGER; // 9007199254740991
 // 以上结果可知，超出了 Number.MAX_SAFE_INTEGER(即2^53 - 1)后得出的结果已经不精确了。同理，小于 Number.MIN_SAFE_INTEGER 的数字也是如此
 ```
 
-## 03. 关于 BigInt 类型
+## 03. 新增的 BigInt 类型
 
 BigInt 是 ES2020 引入的数据类型，可以用任意精度表示整数, 通过在整数末尾附加 n 或调用构造函数来创建。使用 `typeof` 检测 BigInt 类型返回 'bigint'。目前我还未遇到过该类型的使用场景。
 
@@ -85,3 +85,25 @@ Object.getOwnPropertyNames(obj); // ['foo', b]
 Object.getOwnPropertySymbols(obj); // [Symbol(a)]
 Reflect.ownKeys(obj); // ['foo', 'b', Symbol(a)]
 ```
+
+## 05. String 类型冷知识
+
+对于长字符串，我们一般使用 '+' 号拼接
+
+```js
+const str =
+  'Before ES modules were available in browsers, ' +
+  'developers had no native mechanism for authoring JavaScript ' +
+  'in a modularized fashion. ';
+```
+
+但其实还有另一种比较少见的方式，可以在每行末尾使用反斜杠字符（“\”），以指示字符串将在下一行继续。但是这种方式确保反斜杠后面没有空格或任何除换行符之外的字符或缩进，否则反斜杠将不会工作。
+
+```js
+const str2 =
+  'Before ES modules were available in browsers, \
+developers had no native mechanism for authoring JavaScript \
+in a modularized fashion. ';
+```
+
+以上两种方式创建的字符串相同
