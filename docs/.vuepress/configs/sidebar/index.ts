@@ -16,7 +16,8 @@ export const sidebar: SidebarConfig = {
       isGroup: true,
       text: 'WebApi相关',
       children: [
-        '/webapi/clipboard.md'
+        '/webapi/clipboard.md',
+        '/webapi/canvas.md',
       ]
     }
   ],
